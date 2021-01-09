@@ -33,7 +33,7 @@ On Linux use `fdisk -l` to found your USB card reader, on MacOS use `diskutil li
 ## Automatise the backup
 To run the script periodically you can use a `cron` task on your Raspberry. For instance if you want to backup your Raspberry Pi one time per week on Sunday at 4:00 you can use this rule :
 
-`0 4 * * SUN root /home/pi/rpi_to_img_backup/rpi_to_img_backup.sh backup /dev/mmcblk0 -t /mnt/backups`
+`0 4 * * SUN /home/pi/rpi_to_img_backup/rpi_to_img_backup.sh backup /dev/mmcblk0 -t /mnt/backups`
 
 **Please, do not forget to adapt your script path, disk and backup path!**
 

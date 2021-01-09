@@ -60,8 +60,8 @@ Backup()
     CURRENT_DATE=`date +"%Y%m%d"`
     HOSTNAME="$(hostname)"
 
-    #sudo dd bs=4M if=/dev/mmcblk0 | gzip > /mnt/backups/20201112_rpi_server.img.gz
-    sudo dd bs=4M if=${DISK} status=progress | gzip > ${TARGET}/${CURRENT_DATE}_rpi_${HOSTNAME}.img.gz
+    # dd bs=4M if=/dev/mmcblk0 | gzip > /mnt/backups/20201112_rpi_server.img.gz
+    dd bs=4M if=${DISK} status=progress | gzip > ${TARGET}/${CURRENT_DATE}_rpi_${HOSTNAME}.img.gz
 
     echo ""
     echo "Disk backuped with success"
